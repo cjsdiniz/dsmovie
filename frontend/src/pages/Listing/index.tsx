@@ -1,4 +1,4 @@
-import MovieStars from "components/MovieStars";
+import MovieCard from "components/MovieCard";
 import Pagination from "components/Pagination";
 
 function Listing() {
@@ -6,7 +6,24 @@ function Listing() {
         // <h1>Listagem</h1>
         <>
             <Pagination />
-            <MovieStars />
+
+            <div className="container">
+                <div className="row">
+                    <div className="col-sm-6 col-lg-4 col-xl-3 mb-3">
+                        <MovieCard />
+                    </div>
+                    <div className="col-sm-6 col-lg-4 col-xl-3 mb-3">
+                        <MovieCard />
+                    </div>
+                    <div className="col-sm-6 col-lg-4 col-xl-3 mb-3">
+                        <MovieCard />
+                    </div>
+                    <div className="col-sm-6 col-lg-4 col-xl-3 mb-3">
+                        <MovieCard />
+                    </div>
+
+                </div>
+            </div>
         </>
     )
 }
