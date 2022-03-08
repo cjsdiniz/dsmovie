@@ -1,9 +1,13 @@
+import MovieStars from "components/MovieStars";
 import Pagination from "components/Pagination";
 
-function Listing(){
-    return(
+function Listing() {
+    return (
         // <h1>Listagem</h1>
-        <Pagination/>
+        <>
+            <Pagination />
+            <MovieStars />
+        </>
     )
 }
 
