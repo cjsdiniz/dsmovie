@@ -1,5 +1,6 @@
 {
     "java.configuration.updateBuildConfiguration": "interactive",
     "maven.view": "hierarchical",
-    "java.help.shareDiagnostics": true
+    "java.help.shareDiagnostics": true,
+    "java.dependency.packagePresentation": "flat"
 }
