@@ -1,5 +1,6 @@
 package com.dinizc.dsmovie.controllers;
 
+import com.dinizc.dsmovie.dto.MovieDTO;
 import com.dinizc.dsmovie.dto.ScoreDTO;
 import com.dinizc.dsmovie.services.ScoreService;
 
@@ -20,18 +21,21 @@ public class ScoreController {
     @Autowired
     private ScoreService service;
 
-    @GetMapping
-    public Page<ScoreDTO> findAll(Pageable pageable) {
-        return service.findAll(pageable); 
-    }
+    // @GetMapping
+    // public Page<ScoreDTO> findAll(Pageable pageable) {
+    //     return service.findAll(pageable); 
+    // }
+ 
+    // @GetMapping(value = "/{id}")
+    // public ScoreDTO findById(@PathVariable Long id) {
+    //     return service.findById(id); 
+    // }
 
-    @GetMapping(value = "/{id}")
-    public ScoreDTO findById(@PathVariable Long id) {
-        return service.findById(id); 
-    }
+    //@PutMapping(value = "/{id}")
 
-    @PutMapping(value = "/{id}")
-    public ScoreDTO saveScore(@RequestBody ScoreDTO score) {
-        return service.findById(score);
+    @PutMapping
+    public MovieDTO saveScore(@RequestBody ScoreDTO score) {
+        MovieDTO dto = service.saveScore(score);
+        return dto;
     }
 }
